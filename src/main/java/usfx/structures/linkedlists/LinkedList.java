@@ -67,7 +67,27 @@ public class LinkedList<T> implements ILinkedList<T> {
             return;
         }
         head = head.next;
+    }
 
+    /**
+     * Remove the last element of the list
+     */
+    public void removeLast(){
+        if(isEmpty()){
+            System.out.println("List is empty");
+            return;
+        }
+        if(head.next == null){
+            head = null;
+            return;
+        }
+        //1->2->3->4->5
+        //1->2->3->null
+        Nodo<T> current = head;
+        while(current.next.next != null){
+            current = current.next;
+        }
+        current.next = null;
     }
 
     @Override

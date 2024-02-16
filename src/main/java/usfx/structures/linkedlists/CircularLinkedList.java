@@ -25,12 +25,18 @@ public class CircularLinkedList<T> implements ILinkedList<T> {
 
     @Override
     public Nodo<T> first() {
-        return null;
+        if (isEmpty()){
+            return null;
+        }
+        return tail.next;
     }
 
     @Override
     public Nodo<T> last() {
-        return null;
+        if (isEmpty()){
+            return null;
+        }
+        return tail;
     }
 
 
@@ -48,12 +54,27 @@ public class CircularLinkedList<T> implements ILinkedList<T> {
 
     @Override
     public void addLast(T data) {
-
+        if (isEmpty()){
+            tail = new Nodo<T>(data);
+            tail.next = tail;
+            return;
+        }
+        Nodo<T> newNode = new Nodo<T>(data);
+        newNode.next = tail.next;
+        tail.next = newNode;
+        tail = newNode;
     }
 
     @Override
     public void removeFirst() {
-
+        if (isEmpty()){
+            return;
+        }
+        if (tail.next == tail){
+            tail = null;
+            return;
+        }
+        tail.next = tail.next.next;
     }
 
     @Override

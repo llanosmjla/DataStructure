@@ -8,11 +8,11 @@ public interface IStack<T>{
     /**
      * Method pop, removes the element at the top of the stack
      */
-    Nodo<T> pop();
+    T pop();
     /**
      * Method top, returns the element at the top of the stack
      */
-    Nodo<T> top();
+    T top();
     /**
      * Method isEmpty, returns true if the stack is empty
      */

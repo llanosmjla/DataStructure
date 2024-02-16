@@ -19,17 +19,27 @@ public class ArrayStack<T> implements IStack<T> {
 
     @Override
     public void push(T data) {
-
+        array[++s] = data;
     }
 
     @Override
-    public Nodo<T> pop() {
-        return null;
+    public T pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return null;
+        }
+        var data = array[s];
+        array[s--] = null;
+        return data;
     }
 
     @Override
-    public Nodo<T> top() {
-        return null;
+    public T top() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return null;
+        }
+        return array[s];
     }
 
     @Override
@@ -44,8 +54,8 @@ public class ArrayStack<T> implements IStack<T> {
 
     @Override
     public void print() {
-        for (int i = 0; i <= s; i++) {
-            System.out.println(array[i]);
+        for (int i = size()-1; i >= 0; i--) {
+            System.out.println("["+ i + "] : " + array[i]);
         }
     }
 }

@@ -1,5 +1,6 @@
+package listtests;
+
 import org.junit.Test;
-import usfx.structures.helpclasses.Person;
 import usfx.structures.linkedlists.LinkedList;
 
 import static org.junit.Assert.assertTrue;

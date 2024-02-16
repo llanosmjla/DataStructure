@@ -12,25 +12,25 @@ public class LinkedListStack<T> implements IStack<T> {
 
     @Override
     public void push(T data) {
-        list.addFirst(data);
+        list.addLast(data);
     }
 
     @Override
-    public Nodo<T> pop() {
+    public T pop() {
         if (isEmpty()) {
             return null;
         }
-        Nodo<T> temp = list.first();
-        list.removeFirst();
-        return temp;
+        Nodo<T> temp = list.last();
+        list.removeLast();
+        return temp.data;
     }
 
     @Override
-    public Nodo<T> top() {
+    public T top() {
         if (isEmpty()) {
             return null;
         }
-        return list.first();
+        return list.last().data;
 
     }
 
@@ -51,6 +51,10 @@ public class LinkedListStack<T> implements IStack<T> {
             System.out.println("Stack is empty");
             return;
         }
-        list.print();
+        for (int i = list.size() - 1; i >= 0; i--) {
+            System.out.println("[" + i + "]: " + list.last().data);
+            list.addFirst(list.last().data);
+            list.removeLast();
+        }
     }
 }

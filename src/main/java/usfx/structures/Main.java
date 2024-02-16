@@ -7,41 +7,37 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         //menu();
-        String option;
-        do {
+        String option = " ";
+        while (!option.equals("S")) {
             menu();
             System.out.print("Enter your option: ");
-            option = scanner.nextLine();
-            if (option.equals("A")) {
-                IRunner runner = RunnerFactory.getIRunner(option);
-                runner.run();
-                break;
+            option = scanner.nextLine().toUpperCase();
+            switch (option) {
+                case "A", "B", "C", "E", "F", "G", "H":
+                    IRunner runner = RunnerFactory.getIRunner(option);
+                    runner.run();
+                    break;
+                case "S":
+                    System.out.println("Goodbye");
+                    break;
+                default:
+                    System.out.println("Invalid option");
+                    break;
             }
-            if (option.equals("B")) {
-                IRunner runner = RunnerFactory.getIRunner(option);
-                runner.run();
-                break;
-            }
-            if (option.equals("C")) {
-                IRunner runner = RunnerFactory.getIRunner(option);
-                runner.run();
-                break;
-            }
-            if (option.equals("E")) {
-                IRunner runner = RunnerFactory.getIRunner(option);
-                runner.run();
-                break;
-            }
-        } while (!option.equals("Q"));
+        }
     }
 
-    public static void menu(){
+    public static void menu() {
         System.out.println("Welcome to the menu of data structures");
-        System.out.println("A. LinkedList");
-        System.out.println("B. DoublyLinkedList");
-        System.out.println("C. CircularLinkedList");
+        System.out.println("A. List");
         System.out.println("E. Stack");
-
+        System.out.println("F. Queue");
+        System.out.println("G. Tree");
+        System.out.println("H. Graph");
+        System.out.println("S. Exit");
     }
+
+
 }
