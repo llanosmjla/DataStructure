@@ -15,7 +15,7 @@ public class Main {
             System.out.print("Enter your option: ");
             option = scanner.nextLine().toUpperCase();
             switch (option) {
-                case "A", "B", "C", "E", "F", "G", "H":
+                case "A", "B", "C", "E", "F", "G", "H", "I", "J", "K":
                     IRunner runner = RunnerFactory.getIRunner(option);
                     runner.run();
                     break;
@@ -30,12 +30,15 @@ public class Main {
     }
 
     public static void menu() {
-        System.out.println("Welcome to the menu of data structures");
+        System.out.println("\nWelcome to the menu of data structures");
         System.out.println("A. List");
         System.out.println("E. Stack");
         System.out.println("F. Queue");
         System.out.println("G. Tree");
         System.out.println("H. Graph");
+        System.out.println("I. Bubble Sort");
+        System.out.println("J. Quick Sort");
+        System.out.println("K. Merge Sort");
         System.out.println("S. Exit");
     }
 

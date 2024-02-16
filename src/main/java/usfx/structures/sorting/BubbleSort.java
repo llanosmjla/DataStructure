@@ -39,7 +39,7 @@ public class BubbleSort {
         arr[j] = temp;// 3 4 2 1    -- 3 2 4 1  -- 3 2 1 4
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         BubbleSort bs = new BubbleSort();
         int[] arr = {64, 34, 25, 12, 22, 11, 90,1, 200, 5, 6, 8, 24, 4,23, 201, 222, 223, 333, 15, 16, 17, 18};
         bs.bubbleSortRecursive(arr, arr.length);
@@ -47,6 +47,6 @@ public class BubbleSort {
         for(int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + " ");
         }
-    }
+    }*/
 
 }

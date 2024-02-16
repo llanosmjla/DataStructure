@@ -44,11 +44,11 @@ public class MergeSort {
         }
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         int[] array = {5, 3, 8, 6, 2, 7, 1, 4};
         mergeSort(array);
         for (int i : array) {
             System.out.print(i + " ");
         }
-    }
+    }*/
 }

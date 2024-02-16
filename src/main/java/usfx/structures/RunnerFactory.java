@@ -7,6 +7,10 @@ import usfx.structures.linkedlists.CircularLinkedListRunner;
 import usfx.structures.linkedlists.DoublyLinkedListRunner;
 import usfx.structures.linkedlists.LinkedListRunner;
 import usfx.structures.queues.QueueRunner;
+import usfx.structures.sorting.BubbleRunner;
+import usfx.structures.sorting.BubbleSort;
+import usfx.structures.sorting.MergeSortRunner;
+import usfx.structures.sorting.QuickRunner;
 import usfx.structures.stacks.StackRunner;
 import usfx.structures.trees.BinaryTree;
 import usfx.structures.trees.TreeRunner;
@@ -33,6 +37,15 @@ public class RunnerFactory {
         }
         if (structureID.equals("H")) {
             return new GraphRunner();
+        }
+        if (structureID.equals("I")) {
+            return new BubbleRunner();
+        }
+        if (structureID.equals("J")) {
+            return new QuickRunner();
+        }
+        if (structureID.equals("K")) {
+            return new MergeSortRunner();
         }
         if (structureID.equals("Q")) {
             System.exit(0);
