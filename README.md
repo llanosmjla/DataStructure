@@ -1,3 +1,27 @@
-# DataStructure
+# Data Structures - Module III
 
-## Helo World
+## Content
+
+- Laboratories
+  - Fibonci
+  - TowerOfHanoi
+- Data Structures
+  - List
+    - LinkedList
+    - DoublyLinkedList
+    - CircularLinkedList
+  - Stacks
+    - ArrayStack
+    - LinkedListStack
+  - Queue
+    - ArrayQueue
+    - LinkedListQueue
+    - Dequeue
+  - Trees
+  - Graph
+  - Sorting
+ 
+
+
+  
+
